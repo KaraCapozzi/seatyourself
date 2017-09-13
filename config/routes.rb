@@ -4,7 +4,7 @@ root 'restaurants#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 resources :users
 resources :reservations
-resources :restuarants
+resources :restaurants
 
 
 end

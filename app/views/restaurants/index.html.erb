@@ -7,5 +7,5 @@
 <% @restaurants.each do |restaurant| %>
 <p><%= restaurant.name %>, <%=restaurant.location %>, <%=restaurant.opening_time %>,
    <%=restaurant.closing_time %>, <%=restaurant.contact_phone%>
-
+<%= link_to "See Restaurant", restaurant_path(restaurant.id) %>
 <%end%>
