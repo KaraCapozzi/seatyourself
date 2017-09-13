@@ -1,0 +1,17 @@
+<%= form_for(@reservation) do |f| %>
+
+<p>
+  <%= f.label :date %><br>
+  <%= f.date_select :date %>
+</p>
+
+<p>
+  <%= f.label :time %><br>
+  <%= f.time_select :time %>
+</p>
+
+  <p>
+    <%= f.submit "Find a table" %>
+  </p>
+
+  <%end%>

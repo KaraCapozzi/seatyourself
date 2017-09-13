@@ -1,0 +1,11 @@
+<h1>SeatYourself</h1>
+
+<%= render "/reservations/form_reservation" %>
+
+<h1> Restaurants </h1>
+
+<% @restaurants.each do |restaurant| %>
+<p><%= restaurant.name %>, <%=restaurant.location %>, <%=restaurant.opening_time %>,
+   <%=restaurant.closing_time %>, <%=restaurant.contact_phone%>
+
+<%end%>
