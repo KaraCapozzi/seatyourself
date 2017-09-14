@@ -11,12 +11,21 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new
     @reservation.date = params[:reservation][:date]
     @reservation.time = params[:reservation][:time]
+    @reservation.people = params[:reservation][:people]
 
     if @reservation.save
-      redirect_to restaurant_path(@reservation)
+      redirect_to restaurants_path(@restaurant)
       flash[:notice] = "Reservation confirmed."
     else
       render 'new'
+
     end
   end
+
+  def update
+
+  end
+
+
+
 end

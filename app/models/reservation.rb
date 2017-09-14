@@ -9,7 +9,7 @@ class Reservation < ApplicationRecord
     seats_filled = Reservation.where(date: self.date).where(time: self.time).sum(:people)
     available = max_capacity - seats_filled
       if self.people > available
-        errors.add("This day and time is unavailable at the moment for your party.  Please try another date or time.")
+        errors.add(:people, "This day and time is unavailable at the moment for your party. Please try another date or time.")
       end
     end
   end
