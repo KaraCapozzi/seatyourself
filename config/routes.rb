@@ -5,6 +5,9 @@ root 'restaurants#index'
 resources :users
 resources :reservations
 resources :restaurants
+resources :sessions
+
+# post '/sessions/new' => 'sessions#new', as 'monkey'
 
 
 end

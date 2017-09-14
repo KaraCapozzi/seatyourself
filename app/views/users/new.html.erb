@@ -1,2 +1,12 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Sign Up Now!</h1>
+
+<% if @user.errors.any? %>
+<ul>
+  <% @user.errors.full_messages.each do |m|%>
+  <li><%= m %></li>
+  <% end %>
+</u>
+<% end %>
+
+<%= render "form_new_user", user: @user %>
+<%= link_to 'Back to Homepage', restaurants_path %>

@@ -9,6 +9,9 @@ class UsersController < ApplicationController
     @user.name = params[:user][:name]
     @user.email = params[:user][:email]
     @user.phone_number = params[:user][:phone_number]
+    @user.password = params[:user][:password]
+    @user.password_confirmation = params[:user][:password_confirmation]
+
 
     if @user.save
       redirect_to restaurants_path(@restaurant)
@@ -21,10 +24,31 @@ class UsersController < ApplicationController
 
   end
 
-  # def index
-  # end
+  def edit
+    @reservation = Reservation.find(params[:reservation_id])
+    @user = User.find(params[:id])
+  end
 
-  #
-  # def edit
-  # end
+  def update
+    @reservation = Reservation.find(params[:reservation_id])
+    @user = User.find(params[:id])
+    @user.name = params[:user][:name]
+    @user.email = params[:user][:email]
+    @user.phone_number = params[:user][:phone_number]
+
+    if @user.save
+      redirect_to restaurants_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    if @user.destroy
+      redirect_to restaurants_path
+      flash[:notice] = 'User deleted'
+    end
+  end
+
 end

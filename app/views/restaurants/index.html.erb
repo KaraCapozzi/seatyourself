@@ -9,3 +9,7 @@
    <%=restaurant.closing_time %>, <%=restaurant.contact_phone%>
 <%= link_to "See Restaurant", restaurant_path(restaurant.id) %>
 <%end%>
+
+<%= link_to "Sign Up", new_user_path %>
+
+<%= link_to "Log in", new_session_path %>
