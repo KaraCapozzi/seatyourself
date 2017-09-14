@@ -2,17 +2,19 @@
 
 
 <p>
-  <%= f.label :people %><br>
-  <%= f.text_field :people %>
+    <%= f.label :people %><br>
+    <%= f.text_field :people %>
+</p>
+
+
+<p>
+   <%= f.label :date %><br>
+   <%= f.text_field :date, id: "date",type: "date" %>
 </p>
 
 <p>
-  <%= f.label :date %><br>
-  <%= f.text_field :date %>
-</p>
-<p>
-  <%= f.label :time %><br>
-  <%= f.text_field :time%>
+   <%= f.label :time %><br>
+   <%= f.text_field :time, id: "time", type:"time"%>
 </p>
 
   <p>

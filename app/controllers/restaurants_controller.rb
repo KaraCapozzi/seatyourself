@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+before_action :ensure_loged_in, except: [:show, :index]
 
   def index
     @restaurants = Restaurant.all

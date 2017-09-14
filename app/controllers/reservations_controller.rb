@@ -13,7 +13,7 @@ class ReservationsController < ApplicationController
     @reservation.time = params[:reservation][:time]
     @reservation.people = params[:reservation][:people]
 
-    if @reservation.save
+    if @reservation.save!
       redirect_to restaurants_path(@restaurant)
       flash[:notice] = "Reservation confirmed."
     else

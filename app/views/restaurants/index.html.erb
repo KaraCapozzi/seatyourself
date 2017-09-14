@@ -1,15 +1,23 @@
+<p>
+<%= link_to "Sign Up", new_user_path %>
+
+<%= link_to "Log in", new_session_path %>
+
+<%= link_to "Log out", restaurants_path %></p>
 <h1>SeatYourself</h1>
+
 
 <%= render "/reservations/form_reservation" %>
 
 <h1> Restaurants </h1>
 
 <% @restaurants.each do |restaurant| %>
-<p><%= restaurant.name %>, <%=restaurant.location %>, <%=restaurant.opening_time %>,
-   <%=restaurant.closing_time %>, <%=restaurant.contact_phone%>
-<%= link_to "See Restaurant", restaurant_path(restaurant.id) %>
+<p><ul>
+  <li><%= link_to restaurant.name, restaurant_path(restaurant.id) %></li><br>
+  <li>Location:<%=restaurant.location %></li>
+  <li>Opening time:<%=restaurant.opening_time %></li>
+  <li>Closing time:<%=restaurant.closing_time %></li>
+  <li>Contact:<%=restaurant.contact_phone%></li>
+</ul>
+</p>
 <%end%>
-
-<%= link_to "Sign Up", new_user_path %>
-
-<%= link_to "Log in", new_session_path %>
