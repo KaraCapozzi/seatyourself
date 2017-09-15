@@ -5,6 +5,7 @@ before_action :ensure_loged_in, except: [:show, :index]
     @restaurants = Restaurant.all
     @reservation = Reservation.new
     @user = User.new
+
   end
 
   def new
@@ -14,7 +15,6 @@ before_action :ensure_loged_in, except: [:show, :index]
 
   def show
     @restaurant = Restaurant.find(params[:id])
-    @reservation = Reservation.find(params[:id])
-    @user = User.find(params[:id])
+    @reservation = Reservation.new
   end
 end

@@ -3,19 +3,10 @@
 <h1> Welcome User! </h1>
 
 
-
-<li>Location:<%=@restaurant.location %></li>
-<li>Opening time:<%=@restaurant.opening_time %></li>
-<li>Closing time:<%=@restaurant.closing_time %></li>
-<li>Contact:<%=@restaurant.contact_phone%></li>
-
-<%=render 'reservations/form_reservation.html.erb'%>
-
-
 <h1>Thank You For Making Your Reservations With Us!</h1>
 <h2>Here is a list of your reservations:</h2>
 
-<%= @current_user.reservations.each do |reservation| %>
+<%= @reservations.each do |reservation| %>
 
 <ul>
   <li>Restaurant:<%= reservation.restaurant.name %></li>
