@@ -15,31 +15,75 @@
  */
  body {
    font-family: Helvetica, Arial;
-   line-height: 1.5;
+   margin: 0px;
  }
-
-title {
-  font-size: 50px;
-  color: blue;
-}
 
 h1 {
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  border-bottom: 5px solid black;
-  color: lightblue;
+  font-size: 45px;
+  color: #1f4e9b;
+  background: lightgrey;
+  margin: 0px;
+  padding: 10px;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 35px;
+  border-bottom: 3px solid black;
+  color: #3390c6;
 }
 
  header {
    text-align: center;
  }
 
+ body > nav {
+   text-align: right;
+   padding: 10px 20px;
+   background-color: black;
+   color: white;
+ }
+.userinfo {
+  text-align: center;
+  font-weight: bold;
+}
+
+.restaurant{
+  border: 2px solid black;
+  display: block;
+  float: left;
+  margin: 10px;
+  padding: 20px;
+}
  main {
    max-width: 800px;
    margin: auto;
    padding: 0px 20px;
  }
 
+br {
+  line-height: 1.5;
+}
+a {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: lightblue;
+}
+
+form {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  border: solid 2px black;
+}
+.button {
+  font-size: 20px;
+  color: red;
+}
  p {
    color: #666666;
  }
@@ -48,17 +92,19 @@ h1 {
    max-width: 300px;
  }
 
+ul {
+  padding: 0px;
+}
  li {
    text-align: center;
    list-style-type: none;
+   line-height: 1.5;
  }
 
  footer {
    color: white;
    background-color: black;
-   padding: 20px;
    text-align: center;
-   margin-top: 60px;
  }
 
  @media (max-width: 600px) {

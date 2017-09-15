@@ -2,6 +2,7 @@
 
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <link rel="stylesheet" href="app/views/layouts/styles.css">
   <title>Seatyourself</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,15 +10,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="userinfo">
+  <nav>
+  <%= link_to "Sign Up", new_user_path %>
+
+  <%= link_to "Log in", new_session_path %><br>
+
     <% if current_user %>
     Signed in as <%= current_user.name%>.<br> <%= link_to "Log out", session_path("current"), :method => :delete %>
     <%end%>
-  </p>
+</nav>
+
+
 
 <%= yield %>
-
-
-
+<!-- <footer>Kara Viktorija and Sakin ©</footer> -->
 </body>
+
 </html>

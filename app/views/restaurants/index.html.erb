@@ -1,14 +1,11 @@
-<p>
-<%= link_to "Sign Up", new_user_path %>
 
-<%= link_to "Log in", new_session_path %>
-</p>
 <h1>SeatYourself</h1>
 
-<h1> Restaurants </h1>
+<h2> Restaurants </h2>
 
 <% @restaurants.each do |restaurant| %>
-<p><ul>
+<div class="restaurant">
+<ul>
   <li><%= link_to restaurant.name, restaurant_path(restaurant.id) %></li><br>
   <li><img src="http://assets.westinharbourcastletoronto.com/lps/assets/u/Toula-Restaurant-CN-Tower-611x343.jpg">
   <li>Location:<%=restaurant.location %></li>
@@ -16,5 +13,5 @@
   <li>Closing time:<%=restaurant.closing_time %></li>
   <li>Contact:<%=restaurant.contact_phone%></li>
 </ul>
-</p>
+</div>
 <%end%>
