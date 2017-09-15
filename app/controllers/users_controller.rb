@@ -12,18 +12,18 @@ class UsersController < ApplicationController
     @user.password = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
 
-
     if @user.save
       redirect_to restaurants_path(@restaurant)
       flash[:notice] = "Welcome, please seat yourself!"
        else
         render 'new'
-
     end
-
-
   end
 
+def show
+  @user = User.find(params[:id])
+  @restaurant = Restaurant.find(params[:id])
+end
   def edit
     @reservation = Reservation.find(params[:reservation_id])
     @user = User.find(params[:id])
@@ -50,5 +50,4 @@ class UsersController < ApplicationController
       flash[:notice] = 'User deleted'
     end
   end
-
 end

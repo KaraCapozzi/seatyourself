@@ -1,9 +1,8 @@
 <p>
-<%= link_to "Sign Up", new_user_path %>
+<%= link_to "Sign Up", restaurant_reservation_user_path %>
 
 <%= link_to "Log in", new_session_path %>
-
-<%= link_to "Log out", restaurants_path %></p>
+</p>
 <h1>SeatYourself</h1>
 
 
@@ -14,6 +13,7 @@
 <% @restaurants.each do |restaurant| %>
 <p><ul>
   <li><%= link_to restaurant.name, restaurant_path(restaurant.id) %></li><br>
+  <li><img src="http://assets.westinharbourcastletoronto.com/lps/assets/u/Toula-Restaurant-CN-Tower-611x343.jpg">
   <li>Location:<%=restaurant.location %></li>
   <li>Opening time:<%=restaurant.opening_time %></li>
   <li>Closing time:<%=restaurant.closing_time %></li>
