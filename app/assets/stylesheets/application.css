@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ html {
+   margin: auto;
+ }
  body {
    font-family: Helvetica, Arial;
    margin: 0px;
@@ -51,7 +55,10 @@ h2 {
   font-weight: bold;
 }
 
-.restaurant{
+.restaurants {
+
+}
+.restaurant {
   border: 2px solid black;
   display: block;
   float: left;
@@ -99,6 +106,7 @@ ul {
    text-align: center;
    list-style-type: none;
    line-height: 1.5;
+   font-weight: lighter;
  }
 
  footer {

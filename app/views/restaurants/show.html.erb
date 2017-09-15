@@ -1,9 +1,10 @@
 <%= link_to("Homepage", restaurants_path)%>
 
 </p>
-<li>Location:<%=@restaurant.location %></li>
-<li>Opening time:<%=@restaurant.opening_time %></li>
-<li>Closing time:<%=@restaurant.closing_time %></li>
-<li>Contact:<%=@restaurant.contact_phone%></li>
+<li>Location:  <%=@restaurant.location %></li>
+<li>Opening time:  <%=@restaurant.opening_time %></li>
+<li>Closing time:  <%=@restaurant.closing_time %></li>
+<li>Contact:  <%=@restaurant.contact_phone%></li>
+<li>Website:  <%=@restaurant.url%></li>
 
 <%=render 'reservations/form_reservation.html.erb'%>

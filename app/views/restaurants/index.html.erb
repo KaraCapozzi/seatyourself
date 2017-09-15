@@ -3,15 +3,18 @@
 
 <h2> Restaurants </h2>
 
+<section class="restaurants">
 <% @restaurants.each do |restaurant| %>
 <div class="restaurant">
 <ul>
   <li><%= link_to restaurant.name, restaurant_path(restaurant.id) %></li><br>
   <li><img src="http://assets.westinharbourcastletoronto.com/lps/assets/u/Toula-Restaurant-CN-Tower-611x343.jpg">
-  <li>Location:<%=restaurant.location %></li>
-  <li>Opening time:<%=restaurant.opening_time %></li>
-  <li>Closing time:<%=restaurant.closing_time %></li>
-  <li>Contact:<%=restaurant.contact_phone%></li>
+  <li>Location:  <%=restaurant.location %></li>
+  <li>Opening time:  <%=restaurant.opening_time %></li>
+  <li>Closing time:  <%=restaurant.closing_time %></li>
+  <li>Contact:  <%=restaurant.contact_phone%></li>
+  <li>Website:  <%=restaurant.url%></li>
 </ul>
 </div>
+</section>
 <%end%>
